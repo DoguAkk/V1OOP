@@ -15,7 +15,7 @@ public class Cirkel {
 
     @Override
     public String toString() {
-        if (radius == 0)
+        if (radius <= 0)
             return null;
         return "cirkel(" + xPositie + ", " + yPositie + ") met radius: " + radius;
     }

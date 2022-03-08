@@ -22,7 +22,7 @@ class VoetbalclubTest {
 
     @Test
     void fouteInvoer() {
-        club1.verwerkResultaat('x');
+        club1.verwerkResultaat('y');
         assertEquals(0, club1.aantalPunten());
     }
 
