@@ -5,17 +5,22 @@ import java.util.ArrayList;
 public class Voorbeeld {
 
     public static void main(String[] args) {
-        ArrayList<Double> cijferlijst = new ArrayList<Double>();
-        cijferlijst.add(6.9);
-        cijferlijst.add(8.1);
-        cijferlijst.add(5.2);
+        ArrayList<Klant> lijst = new ArrayList<>();
 
-        double index1 = cijferlijst.get(1);
-        System.out.println(index1);
+        Klant klant1 = new Klant("Dogukan", "2e Daalsedijk 187", "BBZ");
+        Klant klant2 = new Klant("Oussie", "brug", "In keiland daarzo");
 
-        for (Double cijfer : cijferlijst) {
-            System.out.println(cijfer + " ");
+        lijst.add(klant1);
+        lijst.add(klant2);
+
+
+        int aantal = lijst.size();
+        System.out.println("Dit lijst bevat " + aantal + " klanten.");
+
+        for(Klant gegevens : lijst){
+            System.out.println(gegevens);
         }
+
 
     }
 }
