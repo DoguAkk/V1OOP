@@ -22,9 +22,16 @@ class VoetbalclubTest {
 
     @Test
     void fouteInvoer() {
-        club1.verwerkResultaat('y');
+        club1.verwerkResultaat('u');
         assertEquals(0, club1.aantalPunten());
     }
+
+    @Test
+    void foutInvoerAantalGespeeld(){
+        club1.verwerkResultaat('x');
+        assertEquals(0, club1.aantalGespeeld());
+    }
+
 
     @Test
     void resultaten() {
@@ -37,11 +44,5 @@ class VoetbalclubTest {
         assertEquals(verwacht, club1.toString());
     }
 
-    @Test
-    void resultatenOptellen() {
-        club1.verwerkResultaat('w');
-        club1.verwerkResultaat('g');
-        club1.verwerkResultaat('v');
-    }
 
 }

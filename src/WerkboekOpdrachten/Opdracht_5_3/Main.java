@@ -1,9 +1,7 @@
 package WerkboekOpdrachten.Opdracht_5_3;
-import Demo.Oefenen.Klant;
 import WerkboekOpdrachten.Opdracht_4_1.B.Huisdier;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {

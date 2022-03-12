@@ -16,12 +16,11 @@ public class Leerling {
         return cijfer;
     }
 
-    public void setCijfer(double c) {
+    public void setCijfer(double c){
         cijfer = c;
     }
 
-    @Override
-    public String toString() {
-        return naam + " heeft cijfer: " + cijfer + "\n" ;
+    public String toString(){
+        return "heeft cijfer " + getCijfer() + "\n" ;
     }
 }
