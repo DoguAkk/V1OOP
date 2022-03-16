@@ -17,8 +17,8 @@ public class Voetbalclub {
     }
 
     public String getName() {
-        if (name == null)
-            return "FC";
+        if (name == null || name == "")
+            return name = "FC";
         return name;
     }
 
@@ -36,27 +36,24 @@ public class Voetbalclub {
 
     public void verwerkResultaat(char ch) {
         if (ch == 'w')
-            aantalGewonnen = 3;
+            aantalGewonnen = 1;
         if (ch == 'g')
             aantalGelijk = 1;
         if (ch == 'v')
-            aantalVerloren = 0;
+            aantalVerloren = 1;
     }
 
     public int aantalGespeeld(){
-        return aantalGewonnen + aantalGelijk + aantalVerloren;
+        return aantalGelijk + aantalGewonnen + aantalVerloren;
     }
 
     public int aantalPunten(){
-        return  aantalGewonnen + aantalGelijk;
+        return  (aantalGewonnen * 3) + aantalGelijk;
 
     }
 
-    @Override
-    public String toString() {
-        return "Winst levert " + getAantalGewonnen() + " punten op.\n"
-                + "Gelijkspel levert " + getAantalGelijk() + " punt op.\n"
-                + "verlies levert " + getAantalVerloren() + " punten op.";
+    public String toString(){
+        return name + " " + aantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten();
     }
 
     public static void main(String[] args) {
