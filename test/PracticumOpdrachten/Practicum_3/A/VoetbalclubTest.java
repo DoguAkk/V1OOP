@@ -1,60 +1,49 @@
 package PracticumOpdrachten.Practicum_3.A;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class VoetbalclubTest {
-    private Voetbalclub club1;
-    private int aantalGewonnen;
-    private int aantalGelijk;
-    private int aantalVerloren;
+    private Voetbalclub v;
 
     @BeforeEach
-    public void init() {
-        club1 = new Voetbalclub();
+    public void init(){
+        v = new Voetbalclub("");
     }
 
     @Test
-    void fouteInvoer() {
-        club1.verwerkResultaat('u');
-        assertEquals(0, club1.aantalPunten());
+    public void naamIsNull(){
+        v.getNaam();
+        assertEquals("FC", v.getNaam());
     }
 
     @Test
-    void foutInvoerAantalGespeeld(){
-        club1.verwerkResultaat('p');
-        assertEquals(0, club1.aantalGespeeld());
-    }
-
-
-    @Test
-    void resultaten() {
-        club1.verwerkResultaat('w');
-        club1.verwerkResultaat('v');
-        club1.verwerkResultaat('g');
-        String tekst = club1.getName() + " " +
-                club1.aantalGespeeld() + " " +
-                club1.getAantalGewonnen() + " " +
-                club1.getAantalGelijk() + " " +
-                club1.getAantalVerloren() + " " +
-                club1.aantalPunten();
-
-        assertEquals(tekst, club1.toString());
+    public void foutieveInvoer(){
+        v.verwerkResultaat('x');
+        assertEquals(0, v.aantalPunten(), "aantal punten klopt niet!");
+        assertEquals(0, v.aantalGespeeld(), "aantal wedstrijden klopt niet!");
     }
 
     @Test
-    void resultatenOpetellen() {
-        club1.verwerkResultaat('w');
-        club1.verwerkResultaat('w');
-        String tekst = club1.getName() + " " +
-                club1.aantalGespeeld() + " " +
-                club1.getAantalGewonnen() + "  " +
-                club1.getAantalGelijk() + " " +
-                club1.getAantalVerloren() + " " +
-                club1.aantalPunten();
-        assertEquals(tekst, club1.toString());
+    public void resultaten(){
+        v.verwerkResultaat('w');
+        v.verwerkResultaat('g');
+        v.verwerkResultaat('v');
+        String resultaat = v.getNaam() + "\t" + v.aantalGespeeld() + " " + v.getAantalGewonnen() + " " + v.getAantalGelijk() + " " + v.getAantalVerloren() + " " + v.aantalPunten();
+        assertEquals(resultaat, v.toString());
     }
+
+    @Test
+    public void resultatenOptellen(){
+        v.verwerkResultaat('w');
+        v.verwerkResultaat('w');
+        v.verwerkResultaat('g');
+        assertEquals(7, v.aantalPunten());
+    }
+
+
 
 
 }

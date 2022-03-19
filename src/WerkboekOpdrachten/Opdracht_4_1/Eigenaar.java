@@ -1,4 +1,4 @@
-package WerkboekOpdrachten.Opdracht_4_1.A;
+package WerkboekOpdrachten.Opdracht_4_1;
 
 public class Eigenaar {
     private String naam;
@@ -9,18 +9,16 @@ public class Eigenaar {
     }
 
     public void setGiroNr(int nr) {
-        giroNr = nr;
-    }
+        giroNr = nr; }
 
     public int getGiroNr() {
-        return giroNr;
-    }
+        return giroNr; }
 
     public String getNaam() {
-        return naam;
-    }
+        return naam; }
 
     public String toString() {
-        return naam + " heeft giro " + giroNr;
+        return naam + " en heeft giro " + giroNr;
     }
+
 }

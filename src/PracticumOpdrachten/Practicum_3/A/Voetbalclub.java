@@ -1,33 +1,30 @@
 package PracticumOpdrachten.Practicum_3.A;
 
-//Deze opdracht heb ik samen gewerkt met Oussama
-
 public class Voetbalclub {
-    private String name;
+    private String naam;
     private int aantalGewonnen;
-    private int aantalGelijk;
     private int aantalVerloren;
+    private int aantalGelijk;
 
-    public Voetbalclub(String naam){
-        name = naam;
+    public Voetbalclub(String nm) {
+        naam = nm;
+    }
+    public Voetbalclub(){
     }
 
-    public Voetbalclub() {
-
-    }
-
-    public String getName() {
-        if (name == null || name == "")
-            return name = "FC";
-        return name;
-    }
-
-    public int getAantalGewonnen() {
-        return aantalGewonnen;
+    public String getNaam() {
+        if(naam == null || naam == ""){
+            return "FC";
+        }
+        return naam;
     }
 
     public int getAantalGelijk() {
         return aantalGelijk;
+    }
+
+    public int getAantalGewonnen() {
+        return aantalGewonnen;
     }
 
     public int getAantalVerloren() {
@@ -36,41 +33,22 @@ public class Voetbalclub {
 
     public void verwerkResultaat(char ch) {
         if (ch == 'w')
-            aantalGewonnen = 1;
+            aantalGewonnen = aantalGewonnen + 1;
         if (ch == 'g')
-            aantalGelijk = 1;
+            aantalGelijk = aantalGelijk + 1;
         if (ch == 'v')
-            aantalVerloren = 1;
+            aantalVerloren = aantalVerloren + 1;
     }
 
-    public int aantalGespeeld(){
+    public int aantalGespeeld() {
         return aantalGelijk + aantalGewonnen + aantalVerloren;
     }
 
-    public int aantalPunten(){
-        return  (aantalGewonnen * 3) + aantalGelijk;
-
+    public int aantalPunten() {
+        return (aantalGewonnen * 3) + aantalGelijk;
     }
 
-    public String toString(){
-        return name + " " + aantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten();
-    }
-
-    public static void main(String[] args) {
-        Voetbalclub ajx = new Voetbalclub("Ajax       ");
-        Voetbalclub feij = new Voetbalclub("Feijenoord ");
-
-        feij.verwerkResultaat('w');
-        feij.verwerkResultaat('w');
-        feij.verwerkResultaat('w');
-        feij.verwerkResultaat('g');
-
-        System.out.println("Feijenoord punten: " + feij.aantalPunten());
-        System.out.println("Ajax gespeeld: " + ajx.aantalGespeeld());
-        System.out.println();
-
-        System.out.println(ajx);
-        System.out.println(feij);
-
+    public String toString() {
+        return getNaam() + "\t" + aantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten();
     }
 }

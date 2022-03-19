@@ -1,4 +1,4 @@
-package WerkboekOpdrachten.Opdracht_4_1.A;
+package WerkboekOpdrachten.Opdracht_4_1;
 
 public class Huisdier {
     private String naam;
@@ -13,22 +13,16 @@ public class Huisdier {
     }
 
     public void setBaasje(Eigenaar e) {
-        this.baasje = e;
+        baasje = e;
     }
 
     public Eigenaar getBaasje() {
         return baasje;
     }
 
-    public String getNaam() {
-        return naam;
-    }
-
-    public String getRas() {
-        return ras;
-    }
-
     public String toString() {
-        return naam + ", de " + ras + ", weegt " + gewicht + " kg. \nEn de eigenaar is: " + baasje;
+        return naam + ", de " + ras + ", en weegt " + gewicht + "\n"
+                + "En de eigenaar is: " + baasje;
     }
+
 }

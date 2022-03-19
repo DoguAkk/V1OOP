@@ -33,26 +33,29 @@ public class AutoHuur {
         return huurder;
     }
 
-    public double totaalPrijs() {
-        if (huurder == null || gehuurdeAuto == null)
+    public double totaalPrijs(){
+        if(huurder == null){
             return 0;
-        return aantalDagen * gehuurdeAuto.getPrijsPerDag() * (100 - huurder.getKorting()) / 100;
+        }
+        if(gehuurdeAuto == null){
+            return 0;
+        }
+        return (gehuurdeAuto.getPrijsPerDag() * aantalDagen) - ((gehuurdeAuto.getPrijsPerDag() * aantalDagen) / 100 * huurder.getKorting());
     }
 
     @Override
     public String toString() {
-        String tekst = "";
-        if (getGehuurdeAuto() == null)
-            tekst += " er is geen auto bekend";
-        else
-            tekst += getGehuurdeAuto();
-        tekst += "\n";
-        if (getHuurder() == null)
-            tekst += " er is geen huurder bekend";
-        else
-            tekst += getHuurder();
-        tekst += "\n aantal dagen: " + getAantalDagen() + " en dat kost " + totaalPrijs();
-        return tekst;
-
+        String s = "";
+        if (gehuurdeAuto == null){
+            s += " er is geen auto bekend";
+        } else {
+            s += " autotype: " + gehuurdeAuto;
+        }
+        if (huurder == null){
+            s += "\n er is geen huurder bekend";
+        } else {
+            s += " \n op naam van: " + huurder;
+        }
+        return s + "\n" + " aantal dagen: " + aantalDagen + " en dat kost " + totaalPrijs();
     }
 }

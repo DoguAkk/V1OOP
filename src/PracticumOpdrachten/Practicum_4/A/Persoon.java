@@ -19,6 +19,6 @@ public class Persoon {
 
     @Override
     public String toString() {
-        return getNaam() + "; leeftijd " + getLeeftijd() + " jaar";
+        return getNaam() + "; leeftijd " + getLeeftijd();
     }
 }

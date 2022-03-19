@@ -10,7 +10,7 @@ public class Huis {
         bouwjaar = bwjr;
     }
 
-    public void setHuisbaas(Persoon hb){
+    public void setHuisbaas(Persoon hb) {
         huisbaas = hb;
     }
 
@@ -20,6 +20,7 @@ public class Huis {
 
     @Override
     public String toString() {
-        return "huis " + adres + " is gebouwd in " + bouwjaar + "\nen heeft huisbaas " + huisbaas.getNaam() + "; leeftijd " + huisbaas.getLeeftijd() + " jaar";
+        return "Huis " + adres + " is gebouw in " + bouwjaar + "\n"
+                + "en heeft huisbaar " + huisbaas;
     }
 }

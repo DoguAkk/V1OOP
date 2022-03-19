@@ -18,6 +18,6 @@ public class Klant {
 
     @Override
     public String toString() {
-        return " op naam van: " + naam + " (korting: " + kortingsPercentage + "%)";
+        return naam + " (korting: " + kortingsPercentage + "%)";
     }
 }

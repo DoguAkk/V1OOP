@@ -5,13 +5,13 @@ public class Zwembad {
     private double lengte;
     private double diepte;
 
-    public Zwembad(double br, double le, double di){
+    public Zwembad(double br, double le, double di) {
         breedte = br;
         lengte = le;
         diepte = di;
     }
 
-    public Zwembad(){
+    public Zwembad() {
 
     }
 
@@ -39,12 +39,11 @@ public class Zwembad {
         diepte = di;
     }
 
-    public double inhoud(){
-        return diepte * lengte * breedte;
+    public double inhoud() {
+        return breedte * lengte * diepte;
     }
 
-    @Override
     public String toString() {
-        return "Dit zwembad is " + getBreedte() + " meter breed, " + getLengte() + " meter lang, en " + getDiepte() + " meter diep";
+        return "Dit zwembad is " + breedte + " meter breed, " + lengte + " meter lang, en " + diepte + " meter diep";
     }
 }

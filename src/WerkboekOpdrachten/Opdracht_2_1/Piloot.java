@@ -5,21 +5,20 @@ public class Piloot {
     private int vlieguren;
     private double salaris;
 
-    public Piloot(String nm){
+    public Piloot(String nm) {
         naam = nm;
-
-    }
-
-    public double getSalaris() {
-        return salaris;
     }
 
     public int getVlieguren() {
         return vlieguren;
     }
 
-    public void verhoogVliegurenMet(int vvm){
-        vlieguren += vvm;
+    public double getSalaris() {
+        return salaris;
+    }
+
+    public void verhoogVliegurenMet(int vg) {
+        vlieguren += vg;
     }
 
     public void setSalaris(double sl) {
@@ -27,7 +26,7 @@ public class Piloot {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return naam + " heeft " + vlieguren + " vlieguren gemaakt en verdient " + salaris;
     }
 }

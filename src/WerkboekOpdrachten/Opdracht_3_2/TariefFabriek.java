@@ -1,15 +1,15 @@
 package WerkboekOpdrachten.Opdracht_3_2;
 
 public class TariefFabriek {
-    public static void main(String [] args){
+    public static void main(String[] args){
         BelastingTarieven tarief = new BelastingTarieven();
+        boolean genereren = true;
 
-        boolean percentage = true;
-        while(percentage){
+        while(genereren) {
             try {
                 tarief.produceerBelastingTarieven();
-                percentage = false;
-            } catch (Exception e) {
+                genereren = false;
+            } catch (ArithmeticException ae) {
                 System.out.println("mislukt");
             }
         }

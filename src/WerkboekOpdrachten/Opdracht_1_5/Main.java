@@ -2,20 +2,21 @@ package WerkboekOpdrachten.Opdracht_1_5;
 
 public class Main {
 
-    public static void main(String [] arg){
-        Student student1 = new Student("Sylvester");                 //maakt student 1 aan
-        Student student2 = new Student("Karel", 98765432);      //maakt student 2 aan
+    public static void main(String[] arg) {
 
-        System.out.println("naam: " + student1.getNaam());               //toont gegevens via get methode
-        System.out.println("nummer: " + student1.getStudentNummer());    //toont gegeven via get methode
-        student1.setStudentNummer(12345678);                             //set nieuwe studentnummer in
-        System.out.println("toString: " + student1);                     //toont tostring methode van klant 1
+        Student st1 = new Student("Sylvester");
+        System.out.println("naam: " + st1.getNaam());
+        System.out.println("nummer: " + st1.getStudentNummer() );
+        st1.setStudentNummer(12345678);
+        System.out.println("toString: " + st1.toString());
 
-        System.out.println(" ");                                         //whitespace tussen gegevens van studenten
+        System.out.println();
 
-        System.out.println("naam: " + student2.getNaam());               //toont gegevens via get methode
-        System.out.println("nummer: " + student2.getStudentNummer());    //toont gegevens via get methode
-        System.out.println("toString: " + student2.toString());          //toont tostring methode van student 2
+        Student st2 = new Student("Karel", 98765432);
+        System.out.println("naam: " + st2.getNaam());
+        System.out.println("nummer: " + st2.getStudentNummer());
+        System.out.println("toString: " + st2.toString());
 
     }
+
 }

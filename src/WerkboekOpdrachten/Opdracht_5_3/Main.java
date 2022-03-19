@@ -1,45 +1,28 @@
 package WerkboekOpdrachten.Opdracht_5_3;
-import WerkboekOpdrachten.Opdracht_4_1.B.Huisdier;
+
+import WerkboekOpdrachten.Opdracht_4_2.Huisdier;
 
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         ArrayList<Huisdier> dieren = new ArrayList<>();
-
-        Huisdier dier1 = new Huisdier("Karel", "de schildpad");
-        Huisdier dier2 = new Huisdier("Mufasa", "de leeuw");
-
+        Huisdier dier1 = new Huisdier("Dobermann", "de hond");
+        Huisdier dier2 = new Huisdier("Boncuk", "de kat");
         dieren.add(dier1);
         dieren.add(dier2);
-        dieren.add(new Huisdier("Max", "de hond"));
-
-        int aantal = dieren.size();
-        System.out.println("Deze list bevat " + aantal + " dieren");
-
-        for(int i = 0; i < dieren.size(); i++){
-            System.out.println(dieren.get(i));
+        dieren.add(new Huisdier("Messi", "de geit"));
+        System.out.println(dieren.size());
+        for(Huisdier dier : dieren){
+            System.out.println(dier);
         }
 
         System.out.println(" ");
 
-        dieren.add(0, new Huisdier("Peter", "de cavia"));
-
-        int nieuweAantal = dieren.size();
-
-        System.out.println("Deze list bevat " + nieuweAantal + " dieren");
-
-
-        for(int i = 0; i < dieren.size(); i++){
-            System.out.println(dieren.get(i));
-        }
-
-        System.out.println(" ");
-
-        dieren.set(2, new Huisdier("Boncuk", "de kat"));
-
-        for(int i = 0; i < dieren.size(); i++){
-            System.out.println(dieren.get(i));
+        dieren.add(0, new Huisdier("Karel", "de schildpad"));
+        dieren.set(2, new Huisdier("Snotter", "de Lama"));
+        for(Huisdier dier : dieren){
+            System.out.println(dier);
         }
 
 

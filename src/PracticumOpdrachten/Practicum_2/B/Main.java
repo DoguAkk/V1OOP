@@ -10,7 +10,6 @@ public class Main {
         feij.verwerkResultaat('w');
         feij.verwerkResultaat('g');
 
-
         System.out.println("Feijenoord punten: " + feij.aantalPunten());
         System.out.println("Ajax gespeeld: " + ajx.aantalGespeeld());
         System.out.println();

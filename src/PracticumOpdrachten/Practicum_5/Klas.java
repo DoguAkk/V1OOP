@@ -1,6 +1,5 @@
 package PracticumOpdrachten.Practicum_5;
 
-
 import java.util.ArrayList;
 
 public class Klas {
@@ -17,15 +16,14 @@ public class Klas {
     }
 
     public void wijzigCijfer(String nm, double nweCijfer){
-        for(Leerling l : leerlingen){
-            if (l.getNaam().equals(nm)){
-                l.setCijfer(nweCijfer);
+        for(Leerling leerling : leerlingen){
+            if(leerling.getNaam().equals(nm)){
+                leerling.setCijfer(nweCijfer);
             }
         }
-
     }
 
-    public ArrayList<Leerling> getLeerlingen() {
+    public ArrayList<Leerling> getLeerlingen(){
         return leerlingen;
     }
 
@@ -34,12 +32,12 @@ public class Klas {
     }
 
     @Override
-    public String toString(){
-        String tekst = "In klas " + klasCode + " zitten de volgende leerlingen:" + "\n";
-        for(Leerling l : leerlingen){
-            tekst += l;
+    public String toString() {
+        String s = "";
+        for(Object namen : leerlingen){
+            s += namen + "\n";
         }
-        return tekst;
-
+        return "In klas " + klasCode + " zitten de volgende leerlingen: "
+                + "\n" + s;
     }
 }

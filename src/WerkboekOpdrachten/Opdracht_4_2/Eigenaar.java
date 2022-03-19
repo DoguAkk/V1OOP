@@ -1,8 +1,8 @@
-package WerkboekOpdrachten.Opdracht_4_1.B;
+package WerkboekOpdrachten.Opdracht_4_2;
 
 public class Eigenaar {
     private String naam;
-    private int giroNr;
+    private int giroNummer;
     private Huisdier beestje;
 
     public Eigenaar(String nm){
@@ -19,6 +19,8 @@ public class Eigenaar {
 
     @Override
     public String toString() {
-        return naam + " heeft giro " + giroNr + ". En is het baastje van " + beestje;
+        return naam + " heeft giro " + giroNummer + ". En is het baasje van " + beestje;
     }
 }
+
+

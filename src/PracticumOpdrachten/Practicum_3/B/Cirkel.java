@@ -5,8 +5,8 @@ public class Cirkel {
     private int xPositie;
     private int yPositie;
 
-    public Cirkel(int rad, int x, int y) throws IllegalArgumentException {
-        if (rad <= 0)
+    public Cirkel(int rad, int x, int y){
+        if(rad <= 0)
             throw new IllegalArgumentException("Radius moet groter dan 0 zijn!");
         radius = rad;
         xPositie = x;
@@ -20,3 +20,4 @@ public class Cirkel {
         return "cirkel(" + xPositie + ", " + yPositie + ") met radius: " + radius;
     }
 }
+

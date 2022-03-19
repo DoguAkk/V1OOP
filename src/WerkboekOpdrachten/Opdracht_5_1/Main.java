@@ -1,8 +1,7 @@
 package WerkboekOpdrachten.Opdracht_5_1;
 
 public class Main {
-    public static void main(String[] args) {
-
+    public static void main(String[] args){
         System.out.println(8 + 3 * 5);
         System.out.println((7.0 + 1) / 2);
         System.out.println(7.0 + 1 / 2);
@@ -27,4 +26,5 @@ public class Main {
         m = (b + ++c + a++);
         System.out.println(String.format("%d %d %d %d", m, a, b, c));
     }
+
 }

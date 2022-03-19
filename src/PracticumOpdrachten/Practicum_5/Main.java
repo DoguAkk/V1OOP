@@ -1,6 +1,4 @@
 package PracticumOpdrachten.Practicum_5;
-import java.util.ArrayList;
-
 
 public class Main {
     public static void main(String[] arg) {
@@ -18,3 +16,4 @@ public class Main {
         System.out.println("Aantal leerlingen: " + k.aantalLeerlingen());
     }
 }
+

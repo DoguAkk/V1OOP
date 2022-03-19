@@ -1,12 +1,9 @@
 package WerkboekOpdrachten.Opdracht_5_2;
 
 public class Main {
-    public static void main(String [] args) {
-        int leeftijd = 79;										// Bereik waarvoor de expressie 'true' is:
-        System.out.println(!(leeftijd <= 65));					// leeftijd > 65
-
-        int n = 10;
-        System.out.println(!(n >= 18 || n < 7)); 				// 7 <= n < 18
+    public static void main(String[] args){
+        int leeftijd = 80;
+        System.out.println(!(leeftijd <= 65));
 
         int x = 10;
         System.out.println(!(x >= 18 && x < 40));				// x < 18 || x >= 40
@@ -18,4 +15,6 @@ public class Main {
         System.out.println((ch == 'A' && ch == 'B' ));			// geen waarden mogelijk
         System.out.println(!(ch == 'A' || ch == 'B' ));			// alles behalve 'A' en 'B'
     }
+
+
 }
