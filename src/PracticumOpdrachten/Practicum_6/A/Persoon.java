@@ -1,7 +1,6 @@
 package PracticumOpdrachten.Practicum_6.A;
 
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 
 public class Persoon {
     private String naam;

@@ -1,15 +1,14 @@
 package WerkboekOpdrachten.Opdracht_7_1;
 
-public class Voertuig{
-    String merk;
-    String type = "onbekend";
+public class Voertuig {
+    protected String merk = "onbekend";
+    protected String type = "onbekend";
 
     public Voertuig(){
-        this("onbekend", "onbekend");
     }
 
     public Voertuig(String merk){
-        this.merk = merk;
+        this(merk, "onbekend");
     }
 
     public Voertuig(String merk, String type){
@@ -17,8 +16,7 @@ public class Voertuig{
         this.type = type;
     }
 
-    @Override
-    public String toString() {
+    public String toString(){
         return "Merk: " + merk + ", type: " + type;
     }
 }
